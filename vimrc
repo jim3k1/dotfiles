@@ -43,6 +43,12 @@ let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
+let g:pymode_warnings = 0
+let g:pymode_folding = 0
+let g:pymode_lint = 0
+let g:pymode_breakpoint = 0
+let g:pymode_rope = 0
+
 let g:TerminusFocusReporting=0
 
 let g:ansible_unindent_after_newline = 1
@@ -50,6 +56,27 @@ let g:ansible_unindent_after_newline = 1
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 nmap <leader>t :TagbarToggle<CR>
+
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=0
+
+let g:ale_linters = {
+\    'python': ['pylint', 'flake8', 'autopep8'],
+\    'c': ['gcc'],
+\    'c++': ['gcc'],
+\    'ansible': ['ansible-lint'],
+\    'yaml': ['yamllint']
+\}
+
+highlight ALEErrorSign ctermbg=18 ctermfg=1
+highlight ALEError ctermfg=1 cterm=underline
+highlight ALEWarning ctermfg=3 cterm=underline
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚠'
+let g:ale_sign_offset = 1000000
+let g:ale_sign_column_always = 1
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:airline#extensions#ale#enabled = 1
 
 " filetype plugin indent on
 syntax on
@@ -65,8 +92,9 @@ set wildignore+=*.pyc,node_modules,*.egg-info
 set wildmode=list:longest
 set nofoldenable
 set cursorline
-" highlight clear SignColumn
+highlight clear SignColumn
 " set colorcolumn=80
+colorscheme torte
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Text and Indentation
