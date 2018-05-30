@@ -92,6 +92,7 @@ set wildignore+=*.pyc,node_modules,*.egg-info
 set wildmode=list:longest
 set nofoldenable
 set cursorline
+set autoread
 highlight clear SignColumn
 " set colorcolumn=80
 colorscheme torte
