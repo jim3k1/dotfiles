@@ -1,7 +1,7 @@
 " Plug
 call plug#begin('~/.vim/plugged')
 Plug 'sclo/haproxy.vim'
-Plug 'wincent/terminus'
+" Plug 'wincent/terminus'
 Plug 'ervandew/supertab'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'Valloric/YouCompleteMe'
@@ -51,7 +51,7 @@ let g:pymode_lint = 0
 let g:pymode_breakpoint = 0
 let g:pymode_rope = 0
 
-let g:TerminusFocusReporting=0
+" let g:TerminusFocusReporting=0
 
 let g:ansible_unindent_after_newline = 1
 
