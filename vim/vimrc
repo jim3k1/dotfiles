@@ -24,12 +24,14 @@ Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'terryma/vim-expand-region'
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
-Plug 'python-mode/python-mode', { 'for': 'python' }
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 call plug#end()
 
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
 map <C-x> :NERDTreeToggle<CR>
+
+let g:pymode_python = 'python3'
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'violet'
