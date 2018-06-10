@@ -25,7 +25,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
-Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
+Plug 'pearofducks/ansible-vim'
 call plug#end()
 
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
