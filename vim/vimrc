@@ -7,7 +7,6 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'Valloric/YouCompleteMe'
 Plug 'davidhalter/jedi-vim'
 Plug 'pearofducks/ansible-vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
@@ -26,6 +25,7 @@ Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'pearofducks/ansible-vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
