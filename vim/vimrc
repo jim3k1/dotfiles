@@ -96,6 +96,7 @@ set wildmode=list:longest
 set nofoldenable
 set cursorline
 set autoread
+set showcmd
 highlight clear SignColumn
 " set colorcolumn=80
 colorscheme torte
