@@ -97,6 +97,7 @@ set nofoldenable
 set cursorline
 set autoread
 set showcmd
+set updatetime=100
 highlight clear SignColumn
 " set colorcolumn=80
 colorscheme torte
