@@ -4,7 +4,7 @@ Plug 'sclo/haproxy.vim'
 " Plug 'wincent/terminus'
 Plug 'ervandew/supertab'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'davidhalter/jedi-vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -89,9 +89,12 @@ set wildignore+=*.pyc,node_modules,*.egg-info
 set wildmode=list:longest
 set nofoldenable
 set cursorline
+" Automatically reload files if changed from outside.
 set autoread
 set showcmd
 set updatetime=100
+" Spell check!
+set spelllang=en_gb
 highlight clear SignColumn
 " set colorcolumn=80
 colorscheme torte
