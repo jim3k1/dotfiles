@@ -95,6 +95,8 @@ set showcmd
 set updatetime=100
 " Spell check!
 set spelllang=en_gb
+" Display messages for changes (ie. yank, delete, etc.)
+set report=0
 highlight clear SignColumn
 " set colorcolumn=80
 colorscheme torte
