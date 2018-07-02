@@ -84,9 +84,13 @@ zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
 # End custom completing settings
 
 export EDITOR='vim'
-
+export MINICOM='-m -c on'
+export PATH=$PATH:/sbin:$HOME/android-sdk-linux/platform-tools:$HOME/pycharm/bin:$HOME/blackrose:$HOME/.local/bin:$HOME/custom/bin
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# ssh tunnel
+# ssh -f ubuntu@155.210.71.151 -L 8000:localhost:80 -N
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
