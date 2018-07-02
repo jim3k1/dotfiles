@@ -107,9 +107,11 @@ fi
 source ~/.zplug/init.zsh
 
 # Supports oh-my-zsh plugins and the like
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "plugins/git", from:oh-my-zsh
 zplug "zsh-users/zsh-completions", from:github
+zplug "zsh-users/zsh-syntax-highlighting", from:github
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+zplug "zsh-users/zsh-autosuggestions"
 zplug "chrissicool/zsh-256color"
 zplug "plugins/autopep8", from:oh-my-zsh
 zplug "plugins/common-aliases", from:oh-my-zsh
