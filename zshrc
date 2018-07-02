@@ -104,6 +104,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+source $HOME/.aliases
+
 source ~/.zplug/init.zsh
 
 # Supports oh-my-zsh plugins and the like
