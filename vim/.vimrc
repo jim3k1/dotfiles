@@ -43,8 +43,8 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-let g:airline_left_sep = "\ue0bc"
-let g:airline_right_sep = "\ue0be"
+let g:airline_left_sep = "\ue0b4"
+let g:airline_right_sep = "\ue0b6"
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
