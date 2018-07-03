@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export TERM="xterm-256color"
+
 ############## POWERLEVEL settings #####################################
 
 # Needed for fonts displayed correctly
