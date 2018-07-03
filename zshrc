@@ -127,6 +127,7 @@ zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "zpm-zsh/ssh", from:github
 # zplug load --verbose
+zplug load
 
 fpath=($HOME/.zplug/repos/zsh-users/zsh-completions/src $fpath)
 
