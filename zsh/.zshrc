@@ -92,7 +92,7 @@ export PATH=$PATH:/sbin:$HOME/android-sdk-linux/platform-tools:$HOME/pycharm/bin
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # ssh tunnel
-# ssh -f ubuntu@155.210.71.151 -L 8000:localhost:80 -N
+# ssh -f ubuntu@remoteip -L 8000:localhost:80 -N
 
 source $HOME/.aliases
 
