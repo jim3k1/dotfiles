@@ -94,7 +94,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # ssh -f ubuntu@remoteip -L 8000:localhost:80 -N
 
 source $HOME/.aliases
-
 source ~/.zplug/init.zsh
 
 # Supports oh-my-zsh plugins and the like
