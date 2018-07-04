@@ -6,14 +6,13 @@ export TERM="xterm-256color"
 
 # Needed for fonts displayed correctly
 POWERLEVEL9K_MODE='awesome-fontconfig'
+# POWERLEVEL9K_MODE='nerdfont-complete'
 
 # If you want to dump all of the icons you are using, shown in random colors,
 # add the special segment icons_test to your prompt
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(icons_test)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status os_icon context dir virtualenv vcs ssh)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator battery)
-
-# POWERLEVEL9K_MODE='nerdfont-complete'
 
 # If your shorten strategy, below, is entire directories, this field
 # determines how many directories to leave at the end. If your shorten
