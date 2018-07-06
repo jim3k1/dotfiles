@@ -113,6 +113,7 @@ zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/pylint", from:oh-my-zsh
 zplug "plugins/python", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
+zplug "plugins/tmuxinator", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "zpm-zsh/ssh", from:github
