@@ -1,1 +1,2 @@
 gtk-menu-popup-delay = 0
+gtk-can-change-accels = 1
