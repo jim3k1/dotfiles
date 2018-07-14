@@ -20,7 +20,7 @@ is_tmuxinator_installed() {
 
 create_symlinks() {
     for symlink in "${configs[@]}"; do
-        # TODO: Add symulate option to stow. -n flag.
+        # TODO: Add simulate option to stow. -n flag.
         stow -v -t $HOME "$symlink"
     done
 }
