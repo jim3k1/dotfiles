@@ -12,6 +12,7 @@ is_stow_installed() {
 }
 
 is_tmuxinator_installed() {
+    # We don't needed tmuxinator in every single place.
     if command -v tmuxinator > /dev/null; then
         configs+=("tmuxinator")
     fi
@@ -19,7 +20,8 @@ is_tmuxinator_installed() {
 
 create_symlinks() {
     for symlink in "${configs[@]}"; do
-        stow -v -n -t $HOME "$symlink"
+        # TODO: Add symulate option to stow. -n flag.
+        stow -v -t $HOME "$symlink"
     done
 }
 
