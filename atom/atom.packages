@@ -1,0 +1,15 @@
+autocomplete-clang@0.11.5
+autocomplete-json@5.5.2
+autocomplete-python@1.10.5
+autocomplete-xml@0.10.1
+busy-signal@1.4.3
+color-picker@2.3.0
+intentions@1.1.5
+language-tmux@0.4.0
+linter@2.2.0
+linter-shellcheck@1.4.7
+linter-ui-default@1.7.1
+pigments@0.40.2
+python-debugger@0.2.0
+todo-show@2.3.0
+
