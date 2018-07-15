@@ -2,7 +2,7 @@
 
 
 # Common config files to be stomped.
-declare -a configs=("bash" "common" "tmux" "vim" "zsh")
+declare -a configs=("common" "tmux" "vim")
 
 is_stow_installed() {
     if ! command -v stow > /dev/null; then
@@ -18,8 +18,26 @@ is_tmuxinator_installed() {
     fi
 }
 
+running_shell() {
+    # What shell are we running?
+    shell=$(basename $SHELL)
+    case $shell in
+        zsh)
+            configs+=("zsh")
+            ;;
+        bash)
+            configs+=("bash")
+            ;;
+        *)
+            echo "Shell $shell not configured."
+            ;;
+        esac
+}
+
 create_symlinks() {
+    echo "Stowing following files: ${configs[*]}"
     for symlink in "${configs[@]}"; do
+        echo "Stowing: $symlink"
         # TODO: Add simulate option to stow. -n flag.
         stow -v -t $HOME "$symlink"
     done
@@ -27,4 +45,5 @@ create_symlinks() {
 
 is_stow_installed
 is_tmuxinator_installed
+running_shell
 create_symlinks
