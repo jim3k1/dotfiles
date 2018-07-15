@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-# Common config files to be stomped.
+# Common config files to be stowed.
 declare -a configs=("common" "tmux" "vim")
 
 is_stow_installed() {
@@ -35,15 +35,35 @@ running_shell() {
 }
 
 create_symlinks() {
-    echo "Stowing following files: ${configs[*]}"
+    echo "Config files to be stowed: ${configs[*]}"
     for symlink in "${configs[@]}"; do
         echo "Stowing: $symlink"
-        # TODO: Add simulate option to stow. -n flag.
-        stow -v -t $HOME "$symlink"
+        eval "${cmd[*]}" $symlink
     done
 }
+
+build_command() {
+    cmd=("stow")
+    if [ -n "$simulate" ] && [ "$simulate" -eq "1" ]; then
+        cmd+=("-n")
+    fi
+    cmd+=("-t $HOME")
+}
+
+while getopts "n" opt; do
+    case $opt in
+        n)
+            # Do not actually make any filesystem changes.
+            simulate=1
+            ;;
+        *)
+            exit 1
+            ;;
+    esac
+done
 
 is_stow_installed
 is_tmuxinator_installed
 running_shell
+build_command
 create_symlinks
