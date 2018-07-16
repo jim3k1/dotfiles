@@ -47,6 +47,8 @@ promptinit
 prompt adam1
 
 setopt histignorealldups sharehistory histignoredups histignorespace histsavenodups
+# turns on interactive comments; comments begin with a #.
+setopt interactivecomments
 
 # Use emacs keybindings even if our EDITOR is set to vi
 # bindkey -e
