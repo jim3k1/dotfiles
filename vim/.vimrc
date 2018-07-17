@@ -26,6 +26,7 @@ Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'pearofducks/ansible-vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kaicataldo/material.vim'
 call plug#end()
 
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
@@ -102,7 +103,13 @@ set spelllang=en_gb
 set report=0
 highlight clear SignColumn
 " set colorcolumn=80
-colorscheme torte
+colorscheme material
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" material_theme_style = 'default' | 'palenight' | 'dark'
+let g:material_theme_style='default'
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Text and Indentation
