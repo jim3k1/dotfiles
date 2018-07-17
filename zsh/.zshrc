@@ -38,10 +38,12 @@ POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uF406'
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='white'
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='black'
 
 # It seems modified has precedence over untracked.
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='green'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black'
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='white'
 POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='yellow'
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
@@ -52,7 +54,6 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
-prompt adam1
 
 setopt histignorealldups sharehistory histignoredups histignorespace histsavenodups
 # turns on interactive comments; comments begin with a #.
@@ -109,6 +110,7 @@ source ~/.zplug/init.zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "zsh-users/zsh-completions", from:github
 zplug "zsh-users/zsh-syntax-highlighting", from:github
+# Load theme
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug "zsh-users/zsh-autosuggestions"
 zplug "chrissicool/zsh-256color"
@@ -127,8 +129,6 @@ zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "zpm-zsh/ssh", from:github
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
-# Load theme file
-# zplug 'dracula/zsh', as:theme
 # zplug load --verbose
 zplug load
 
