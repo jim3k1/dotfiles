@@ -5,7 +5,7 @@ export TERM="xterm-256color"
 ############## POWERLEVEL settings #####################################
 
 # Needed for fonts displayed correctly
-+POWERLEVEL9K_MODE='nerdfont-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-fontconfig'
 
 # If you want to dump all of the icons you are using, shown in random colors,
 # add the special segment icons_test to your prompt
