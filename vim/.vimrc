@@ -27,6 +27,7 @@ Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'pearofducks/ansible-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kaicataldo/material.vim'
+Plug 'RRethy/vim-illuminate'
 call plug#end()
 
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
