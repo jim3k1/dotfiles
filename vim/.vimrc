@@ -28,6 +28,7 @@ Plug 'pearofducks/ansible-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kaicataldo/material.vim'
 Plug 'RRethy/vim-illuminate'
+Plug 'pseewald/vim-anyfold'
 call plug#end()
 
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
@@ -80,7 +81,6 @@ let g:ale_sign_column_always = 1
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:airline#extensions#ale#enabled = 1
 
-" filetype plugin indent on
 syntax on
 set background=dark
 set laststatus=2
@@ -115,6 +115,9 @@ let g:material_theme_style='default'
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Text and Indentation
 """""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on
+let anyfold_activate=1
+set foldlevel=0
 " Use smart tabs
 " set smarttab
 
