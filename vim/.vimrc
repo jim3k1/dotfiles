@@ -24,7 +24,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
-Plug 'pearofducks/ansible-vim'
+Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'kaicataldo/material.vim'
 Plug 'RRethy/vim-illuminate'
