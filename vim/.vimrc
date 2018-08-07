@@ -108,6 +108,7 @@ colorscheme material
 if (has("termguicolors"))
   set termguicolors
 endif
+au BufRead,BufNewFile */inventory set filetype=dosini
 
 " material_theme_style = 'default' | 'palenight' | 'dark'
 let g:material_theme_style='default'
