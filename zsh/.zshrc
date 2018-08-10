@@ -58,7 +58,7 @@ POWERLEVEL9K_PYTHON_ICON='🐍'
 autoload -Uz promptinit
 promptinit
 
-setopt histignorealldups sharehistory histignoredups histignorespace histsavenodups
+setopt histignorealldups histignoredups histignorespace histsavenodups
 # turns on interactive comments; comments begin with a #.
 setopt interactivecomments
 
