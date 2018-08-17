@@ -73,7 +73,7 @@ HISTFILE=~/.zsh_history
 # Default completion settings, formatting and messages
 # http://zsh.sourceforge.net/Guide/zshguide06.html
 zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' completer _expand _complete _correct
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
