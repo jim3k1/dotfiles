@@ -70,7 +70,7 @@ nmap <leader>t :TagbarToggle<CR>
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
 
-let g:ale_linters = {'python': ['pylint', 'flake8', 'autopep8'], 'c': ['gcc'], 'c++': ['gcc'], 'ansible': ['ansible-lint'], 'yaml': ['yamllint']}
+let g:ale_linters = {'python': ['pylint', 'flake8', 'autopep8'], 'c': ['gcc'], 'c++': ['gcc'], 'ansible': ['ansible-lint'], 'yaml': ['yamllint'], 'sql': ['sqlint']}
 
 highlight ALEErrorSign ctermbg=18 ctermfg=1
 highlight ALEError ctermfg=1 cterm=underline
