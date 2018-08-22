@@ -70,6 +70,7 @@ nmap <leader>t :TagbarToggle<CR>
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
 
+"""" Ale plugin settings
 let g:ale_linters = {'python': ['pylint', 'flake8', 'autopep8'], 'c': ['gcc'], 'c++': ['gcc'], 'ansible': ['ansible-lint'], 'yaml': ['yamllint'], 'sql': ['sqlint']}
 
 highlight ALEErrorSign ctermbg=18 ctermfg=1
@@ -80,7 +81,9 @@ let g:ale_sign_warning = '⚠'
 let g:ale_sign_offset = 1000000
 let g:ale_sign_column_always = 1
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" vim-airline integrates with ALE for displaying error information in the status bar.
 let g:airline#extensions#ale#enabled = 1
+"""" End Ale plugin settings
 
 """" Nerdcommenter plugin settings
 " Add spaces after comment delimiters by default
