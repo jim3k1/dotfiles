@@ -31,7 +31,7 @@ POWERLEVEL9K_DIR_SHOW_WRITABLE=true
 
 # Set to true if you wish not to show the error code when the last command returned an error.
 POWERLEVEL9K_STATUS_CROSS=true
-POWERLEVEL9K_COLOR_SCHEME='light'
+POWERLEVEL9K_COLOR_SCHEME='dark'
 
 POWERLEVEL9K_OS_ICON_BACKGROUND="white"
 POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
