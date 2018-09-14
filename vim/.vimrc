@@ -151,5 +151,4 @@ set foldlevel=0
 set backspace=indent,eol,start
 
 " YouCompleteMe plugin
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
-
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
