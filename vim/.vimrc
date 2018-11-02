@@ -135,7 +135,7 @@ let g:material_theme_style='default'
 " Text and Indentation
 """""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin indent on
-let anyfold_activate=1
+autocmd Filetype * AnyFoldActivate
 set foldlevel=0
 " Use smart tabs
 " set smarttab
