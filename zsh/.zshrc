@@ -125,16 +125,13 @@ zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/pylint", from:oh-my-zsh
 zplug "plugins/python", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
-if [ -x "$(command -v tmuxinator)" ]; then
-    zplug "plugins/tmuxinator", from:oh-my-zsh
-fi
+zplug "plugins/tmuxinator", from:oh-my-zsh, if: "[[ $(command -v tmuxinator) ]]"
+zplug "plugins/salt", from:oh-my-zsh, if: "[[ $(command -v salt) ]]"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "zpm-zsh/ssh", from:github
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
-if [ -x "$(command -v kubectl)" ]; then
-    zplug "plugins/kubectl", from:oh-my-zsh
-fi
+zplug "plugins/kubectl", from:oh-my-zsh, if: "[[ $(command -v kubectl) ]]"
 # zplug load --verbose
 zplug load
 
