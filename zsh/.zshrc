@@ -97,6 +97,8 @@ zstyle ':completion:*:descriptions' format "$fg[yellow]%B--- %d%b"
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:warnings' format "$fg[red]No matches for:$reset_color %d"
 zstyle ':completion:*:corrections' format '%B%d (errors: %e)%b'
+# Needed for conda. To activate the completion cache for packages.
+zstyle ':completion::complete:*' use-cache 1
 # End custom completing settings
 
 export EDITOR='vim'
