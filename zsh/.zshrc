@@ -134,10 +134,11 @@ zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "zpm-zsh/ssh", from:github
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
 zplug "plugins/kubectl", from:oh-my-zsh, if:"[[ $(command -v kubectl) ]]"
+zplug "esc/conda-zsh-completion", from:github
 # zplug load --verbose
 zplug load
 
-fpath=($HOME/.zplug/repos/zsh-users/zsh-completions/src $fpath)
+fpath=($HOME/.zplug/repos/zsh-users/zsh-completions/src $HOME/.zplug/repos/esc/conda-zsh-completion $fpath)
 
 # Use modern completion system
 autoload -Uz compinit
