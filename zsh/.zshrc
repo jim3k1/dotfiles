@@ -111,11 +111,11 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # ssh -f ubuntu@remoteip -L 8000:localhost:80 -N
 
 source $HOME/.aliases
-source ~/.zplug/init.zsh
+source $HOME/.zplug/init.zsh
+source $HOME/custom/etc/tmuxinator.zsh
 
 # Supports oh-my-zsh plugins and the like
 zplug "plugins/git", from:oh-my-zsh
-zplug "zsh-users/zsh-completions", from:github
 zplug "zsh-users/zsh-syntax-highlighting", from:github
 # Load theme
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
@@ -140,7 +140,7 @@ zplug "esc/conda-zsh-completion", from:github
 # zplug load --verbose
 zplug load
 
-fpath=($HOME/.zplug/repos/zsh-users/zsh-completions/src $HOME/.zplug/repos/esc/conda-zsh-completion $fpath)
+fpath=($HOME/.zplug/repos/esc/conda-zsh-completion $fpath)
 
 # Use modern completion system
 autoload -Uz compinit
