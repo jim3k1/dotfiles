@@ -112,7 +112,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 source $HOME/.aliases
 source $HOME/.zplug/init.zsh
-source $HOME/custom/etc/tmuxinator.zsh
 
 # Supports oh-my-zsh plugins and the like
 zplug "plugins/git", from:oh-my-zsh
@@ -129,7 +128,7 @@ zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/pylint", from:oh-my-zsh
 zplug "plugins/python", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
-zplug "plugins/tmuxinator", from:oh-my-zsh, if: "[[ $(command -v tmuxinator) ]]"
+zplug "tmuxinator/tmuxinator", from:github, use:"completion/tmuxinator.zsh", if: "[[ $(command -v tmuxinator) ]]"
 zplug "plugins/salt", from:oh-my-zsh, if: "[[ $(command -v salt) ]]"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
