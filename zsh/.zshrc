@@ -56,21 +56,84 @@ POWERLEVEL9K_LINUX_DEBIAN_ICON='' # U+F302
 
 ################ End POWERLEVEL settings ##############################
 
+############################ ZSH Options ##############################
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
 
-setopt histignorealldups histignoredups histignorespace histsavenodups
-# turns on interactive comments; comments begin with a #.
+# Do not enter command lines into the history list if they are duplicates of the previous event.
+# Ignore duplication command history list
+setopt histignoredups
+
+# Ignore when commands starts with space
+# Remove command lines from the history list when the first character on the line is a space,
+# or when one of the expanded aliases contains a leading space.
+setopt histignorespace
+
+# If a new command line being added to the history list duplicates an older one, the older
+# command is removed from the list (even if it is not the previous event).
+setopt histignorealldups
+
+# Turns on interactive comments; comments begin with a #.
 setopt interactivecomments
 
-# Use emacs keybindings even if our EDITOR is set to vi
-# bindkey -e
+# When writing out the history file, older commands that duplicate newer ones are omitted.
+setopt histsavenodups
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
+# Automatically use menu completion after the second consecutive request for completion,
+# for example by pressing the tab key repeatedly. This option is overridden by MENU_COMPLETE.
+setopt auto_menu
+
+# auto change directory
+# If a command is issued that can’t be executed as a normal command, and the command is the name
+# of a directory, perform the cd command to that directory.
+setopt auto_cd
+
+# Complete path when aliased command
+# Prevents aliases on the command line from being internally substituted before completion is attempted.
+# The effect is to make the alias a distinct command for completion purposes.
+setopt complete_aliases
+
+# use brace
+# Expand expressions in braces which would not otherwise undergo brace expansion to a lexically ordered
+# list of all the characters.
+setopt brace_ccl
+
+# auto directory pushd that you can get dirs list by cd -[tab]
+# Make cd push the old directory onto the directory stack.
+setopt auto_pushd
+
+# compacked complete list display
+# Try to make the completion list smaller (occupying less lines) by printing the matches in columns
+# with different widths.
+setopt list_packed
+
+# no beep sound when complete list displayed
+setopt nolistbeep
+
+# no no match found
+# If a pattern for filename generation has no matches, print an error, instead of leaving it unchanged
+# in the argument list. This also applies to file expansion of an initial ‘~’ or ‘=’.
+setopt nonomatch
+
+# multi redirect (e.x. echo "hello" > hoge1.txt > hoge2.txt)
+# Perform implicit tees or cats when multiple redirections are attempted.
+# http://zsh.sourceforge.net/Doc/Release/Redirection.html#Redirection
+setopt multios
+
+# historical backward/forward search with linehead string binded to ^P/^N
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
+bindkey "^N" history-beginning-search-forward-end
+############################ End ZSH Options ##############################
+
+# Command history configuration
+# Keep 1000000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000000
+SAVEHIST=1000000
+HISTFILE=$HOME/.zsh_history
 
 # Default completion settings, formatting and messages
 # http://zsh.sourceforge.net/Guide/zshguide06.html
