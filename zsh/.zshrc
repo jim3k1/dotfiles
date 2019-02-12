@@ -191,13 +191,13 @@ zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/pylint", from:oh-my-zsh
 zplug "plugins/python", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
-zplug "tmuxinator/tmuxinator", from:github, use:"completion/tmuxinator.zsh", if: "[[ $(command -v tmuxinator) ]]"
-zplug "plugins/salt", from:oh-my-zsh, if: "[[ $(command -v salt) ]]"
+zplug "tmuxinator/tmuxinator", from:github, use:"completion/tmuxinator.zsh", if:"(( $+commands[tmuxinator] ))"
+zplug "plugins/salt", from:oh-my-zsh, if:"(( $+commands[salt] ))"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "plugins/zsh_reload", from:oh-my-zsh
 zplug "zpm-zsh/ssh", from:github
 zplug "zplug/zplug", hook-build:"zplug --self-manage"
-zplug "plugins/kubectl", from:oh-my-zsh, if:"[[ $(command -v kubectl) ]]"
+zplug "plugins/kubectl", from:oh-my-zsh, use:"kubectl.plugin.zsh", if:"(( $+commands[kubectl] ))"
 zplug "esc/conda-zsh-completion", from:github
 # zplug load --verbose
 zplug load
