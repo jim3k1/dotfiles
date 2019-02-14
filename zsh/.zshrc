@@ -174,7 +174,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # ssh -f ubuntu@remoteip -L 8000:localhost:80 -N
 
 source $HOME/.aliases
-source $HOME/.zplug/init.zsh
+source $ZPLUG_HOME/init.zsh
 
 # Supports oh-my-zsh plugins and the like
 zplug "plugins/git", from:oh-my-zsh
@@ -202,7 +202,7 @@ zplug "esc/conda-zsh-completion", from:github
 # zplug load --verbose
 zplug load
 
-fpath=($HOME/.zplug/repos/esc/conda-zsh-completion $fpath)
+fpath=($ZPLUG_REPOS/esc/conda-zsh-completion $fpath)
 
 # Use modern completion system
 autoload -Uz compinit
