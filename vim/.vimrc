@@ -40,7 +40,7 @@ let g:pymode_python = 'python3'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'violet'
 " Automatically displays all buffers when there's only one tab open.
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 
 if !exists('g:airline_symbols')
@@ -100,7 +100,6 @@ let g:NERDToggleCheckAllLines = 1
 """" End Nerdcommenter plugin settings
 
 syntax on
-set background=dark
 set laststatus=2
 set encoding=UTF-8
 set hlsearch
@@ -122,14 +121,24 @@ set spelllang=en_gb
 set report=0
 highlight clear SignColumn
 " set colorcolumn=80
-colorscheme material
+
+"""" Material theme settings
+" Enable true colors
 if (has("termguicolors"))
   set termguicolors
 endif
-au BufRead,BufNewFile */inventory set filetype=dosini
 
 " material_theme_style = 'default' | 'palenight' | 'dark'
-let g:material_theme_style='default'
+let g:material_theme_style = 'dark'
+
+" To turn on italics, configure as follows:
+" let g:material_terminal_italics = 1
+
+set background=dark
+colorscheme material
+"""" End Material theme settings.
+
+au BufRead,BufNewFile */inventory set filetype=dosini
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Text and Indentation
