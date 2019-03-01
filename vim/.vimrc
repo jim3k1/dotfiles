@@ -37,11 +37,16 @@ map <C-x> :NERDTreeToggle<CR>
 
 let g:pymode_python = 'python3'
 
+"""" Airline settings
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'violet'
 " Automatically displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+" Separators can be configured independently for the tabline,
+" so here is how you can define "straight" tabs:
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -52,6 +57,7 @@ let g:airline_right_sep = "\ue0b6"
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
+"""" End airline settings
 
 let g:pymode_warnings = 0
 let g:pymode_folding = 0
