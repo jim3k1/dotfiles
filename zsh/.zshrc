@@ -174,6 +174,8 @@ export GREP_COLORS="mt=37;45"
 
 # ssh tunnel
 # ssh -f ubuntu@remoteip -L 8000:localhost:80 -N
+# ssh socks5
+# ssh -D 3000 -q -C -N user@host
 
 source $HOME/.aliases
 source $HOME/.zplug/init.zsh
@@ -204,7 +206,7 @@ zplug "esc/conda-zsh-completion", from:github
 # zplug load --verbose
 zplug load
 
-fpath=($ZPLUG_REPOS/esc/conda-zsh-completion $fpath)
+fpath=($HOME/custom/usr/share/zsh/vendor-completions $ZPLUG_REPOS/esc/conda-zsh-completion $fpath)
 
 # Use modern completion system
 autoload -Uz compinit
