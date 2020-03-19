@@ -6,7 +6,6 @@ Plug 'ervandew/supertab'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'davidhalter/jedi-vim'
-Plug 'pearofducks/ansible-vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
@@ -25,7 +24,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
-Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
+Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'kaicataldo/material.vim'
 Plug 'RRethy/vim-illuminate'
