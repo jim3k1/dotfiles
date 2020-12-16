@@ -26,9 +26,10 @@ Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 Plug 'ryanoasis/vim-devicons'
-Plug 'kaicataldo/material.vim'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'RRethy/vim-illuminate'
 Plug 'pseewald/vim-anyfold'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
@@ -128,20 +129,19 @@ highlight clear SignColumn
 " set colorcolumn=80
 
 """" Material theme settings
+" material_theme_style = 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
+let g:material_theme_style = 'default'
 " Enable true colors
 if (has("termguicolors"))
   set termguicolors
 endif
 
-" material_theme_style = 'default' | 'palenight' | 'dark'
-let g:material_theme_style = 'dark'
-
 " To turn on italics, configure as follows:
 " let g:material_terminal_italics = 1
+"""" End Material theme settings.
 
 set background=dark
-colorscheme material
-"""" End Material theme settings.
+colorscheme dracula
 
 au BufRead,BufNewFile */inventory set filetype=dosini
 
