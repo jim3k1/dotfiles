@@ -166,7 +166,7 @@ zstyle ':completion::complete:*' use-cache 1
 
 export EDITOR='vim'
 export MINICOM='-m -c on'
-export PATH=/sbin:$HOME/pycharm/bin:$HOME/.local/bin:$HOME/custom/bin:/usr/sbin:$PATH
+export PATH=/sbin:$HOME/pycharm/bin:$HOME/.local/bin:$HOME/custom/bin:/usr/sbin:$HOME/.gem/ruby/2.5.0/bin:$PATH
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export GREP_COLOR="37;45"
@@ -179,6 +179,9 @@ export GREP_COLORS="mt=37;45"
 
 source $HOME/.aliases
 source $HOME/.zplug/init.zsh
+
+# Colorls
+source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Supports oh-my-zsh plugins and the like
 zplug "plugins/git", from:oh-my-zsh
@@ -206,7 +209,7 @@ zplug "esc/conda-zsh-completion", from:github
 # zplug load --verbose
 zplug load
 
-fpath=($HOME/custom/usr/share/zsh/vendor-completions $ZPLUG_REPOS/esc/conda-zsh-completion $fpath)
+fpath=("$HOME/custom/usr/share/zsh/vendor-completions" "$ZPLUG_REPOS/esc/conda-zsh-completion" "$HOME/.gem/ruby/2.5.0/gems/colorls-1.4.3/zsh" $fpath)
 
 # Use modern completion system
 autoload -Uz compinit
