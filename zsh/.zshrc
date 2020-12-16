@@ -166,7 +166,7 @@ zstyle ':completion::complete:*' use-cache 1
 
 export EDITOR='vim'
 export MINICOM='-m -c on'
-export PATH=/sbin:$HOME/pycharm/bin:$HOME/.local/bin:$HOME/custom/bin:/usr/sbin:$HOME/.gem/ruby/2.5.0/bin:$PATH
+export PATH=/sbin:$HOME/pycharm/bin:$HOME/.local/bin:$HOME/custom/bin:/usr/sbin:$HOME/.gem/ruby/2.5.0/bin:$HOME/.gem/ruby/$(gem env | grep "RUBY VERSION" | awk '{print $4}')/bin:$PATH
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export GREP_COLOR="37;45"
